@@ -31,11 +31,13 @@ There are **no** environment variables to add.
 
 ## 4. Domain
 
-Use the default `*.vercel.app` hostname first. Attach a custom domain only after the production smoke tests pass.
+Production: [https://feed-xray.vercel.app](https://feed-xray.vercel.app)
+
+Attach a custom domain only after the production smoke tests pass.
 
 ## 5. After deploy
 
-Set `SITE.demoUrl` in `lib/site.ts` and replace the README “Live demo” placeholder with the real URL. Do not invent a URL beforehand.
+`SITE.demoUrl` and the README live-demo link are set to [https://feed-xray.vercel.app](https://feed-xray.vercel.app). `SITE.githubUrl` is [https://github.com/ramreddys49/feed-xray](https://github.com/ramreddys49/feed-xray).
 
 ## 6. Production smoke tests
 

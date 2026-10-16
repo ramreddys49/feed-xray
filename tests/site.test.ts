@@ -10,7 +10,7 @@ describe("product metadata", () => {
     expect(SITE.headline).toBe("Your Feed Isn't Random. Discover Why.");
     expect(SITE.tagline).toBe("See why you see what you see.");
     expect(SITE.githubUrl).toBe("https://github.com/ramreddys49/feed-xray");
-    expect(SITE.demoUrl).toBeNull();
+    expect(SITE.demoUrl).toBe("https://feed-xray.vercel.app");
   });
 });
 

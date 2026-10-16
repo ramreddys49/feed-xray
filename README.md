@@ -12,7 +12,7 @@ Source: [github.com/ramreddys49/feed-xray](https://github.com/ramreddys49/feed-x
 
 ## Live demo
 
-Forthcoming after Vercel deployment. Until then, run locally (see below).
+[https://feed-xray.vercel.app](https://feed-xray.vercel.app)
 
 ## Screenshots
 
@@ -107,7 +107,6 @@ Feed X-Ray does **not** implement machine-learning training, embeddings, collabo
 
 ## Future improvements
 
-- Hosted live demo URL (set `SITE.demoUrl` after Vercel deploy)
 - Optional shareable session snapshots (still client-side)
 - Additional Learn modules (creator-side incentives, ranking audits)
 

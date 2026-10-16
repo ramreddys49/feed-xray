@@ -1,6 +1,5 @@
 /**
- * Product identity and public metadata. Live demo URL stays null until a real
- * Vercel deployment exists — do not invent it.
+ * Product identity and public metadata.
  */
 export const SITE = {
   name: "Feed X-Ray",
@@ -16,7 +15,7 @@ export const SITE = {
   description:
     "Explore how behavioral signals influence social media recommendations and sponsored content through an interactive educational simulation.",
   githubUrl: "https://github.com/ramreddys49/feed-xray" as string | null,
-  demoUrl: null as string | null,
+  demoUrl: "https://feed-xray.vercel.app" as string | null,
 } as const;
 
 export function footerNav() {
