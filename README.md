@@ -16,19 +16,41 @@ Source: [github.com/ramreddys49/feed-xray](https://github.com/ramreddys49/feed-x
 
 ## Screenshots
 
-Captured from the running app:
+### User View — Interactive Social Feed
 
-- User View intro: `public/screenshots/user-view.png`
+The first impression: product identity, a guided walkthrough, and an immediately accessible feed.
 
-Still needed (full 1440×900 viewport; automation cropped into illustrations):
+![User View — Interactive Social Feed](public/screenshots/user-view.png)
 
-- Personalized feed
-- Recommendation Engineer Mode
-- Learn View
-- Guided demo panel
-- Why This Post / Why This Ad side-by-side
+### Personalized Feed — Recommendation Ranking
 
-Save additional captures in `public/screenshots/` before publishing.
+Feed Personalization and Ad Personalization sit above the social feed. The right-hand panels show inferred interests as they form.
+
+![Personalized Feed — Recommendation Ranking](public/screenshots/personalized-feed.png)
+
+### Recommendation Engineer Mode
+
+Inspect the ranking pipeline, snapshot metadata, and live events — mechanism, not just outcomes.
+
+![Recommendation Engineer Mode](public/screenshots/engineer-mode.png)
+
+### Learn — How Recommendation Systems Work
+
+Educational modules for the pipeline, signals, ranking, exploration, ads, and simulation limits, mapped from the live session.
+
+![Learn — How Recommendation Systems Work](public/screenshots/learn-view.png)
+
+### Guided Demo — Interactive Walkthrough
+
+An eight-step tour on the real feed. Steps advance only when the visitor performs the required action.
+
+![Guided Demo — Interactive Walkthrough](public/screenshots/guided-demo.png)
+
+### Why This Post / Why This Ad — Explainability
+
+Per-item explanations for organic ranking decisions and sponsored placement.
+
+![Why This Post / Why This Ad — Explainability](public/screenshots/explainability.png)
 
 ## Key features
 
