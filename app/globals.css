@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #05070d;
+  --foreground: #e8eef7;
 }
 
 @theme inline {
@@ -12,15 +12,162 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  overflow-x: clip;
 }
 
 body {
-  background: var(--background);
+  overflow-x: clip;
+  background:
+    radial-gradient(1100px 560px at 12% -12%, rgb(56 214 255 / 0.07), transparent 52%),
+    radial-gradient(900px 480px at 92% 0%, rgb(167 139 250 / 0.05), transparent 46%),
+    var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+:focus-visible {
+  outline: 2px solid #7ee7ff;
+  outline-offset: 2px;
+}
+
+.fx-btn-primary {
+  border-radius: 999px;
+  border: 1px solid rgb(103 232 249 / 0.45);
+  background: rgb(8 145 178 / 0.45);
+  padding: 0.45rem 1rem;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ecfeff;
+}
+
+.fx-btn-primary:hover {
+  background: rgb(34 211 238 / 0.24);
+}
+
+.fx-btn-secondary {
+  border-radius: 999px;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  background: rgb(255 255 255 / 0.04);
+  padding: 0.4rem 0.9rem;
+  font-size: 12px;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.fx-btn-secondary:hover {
+  color: #e2e8f0;
+}
+
+.signal-flash {
+  animation: signal-flash-in 180ms ease-out;
+}
+
+.profile-bar {
+  transition: width 480ms ease;
+}
+
+.feed-reorder > * {
+  animation: feed-card-in 280ms ease;
+}
+
+.insight-scroll,
+.signal-log,
+.engineer-scroll {
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(126 231 255 / 0.38) transparent;
+}
+
+.insight-scroll::-webkit-scrollbar,
+.signal-log::-webkit-scrollbar,
+.engineer-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.insight-scroll::-webkit-scrollbar-thumb,
+.signal-log::-webkit-scrollbar-thumb,
+.engineer-scroll::-webkit-scrollbar-thumb {
+  background: rgb(126 231 255 / 0.3);
+  border-radius: 999px;
+}
+
+@keyframes signal-flash-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes feed-card-in {
+  from {
+    opacity: 0.55;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes guide-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(126 231 255 / 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgb(126 231 255 / 0);
+  }
+}
+
+[data-guide-active="true"] {
+  position: relative;
+  z-index: 1;
+  outline: 2px dashed #7ee7ff;
+  outline-offset: 3px;
+  border-radius: 999px;
+}
+
+[data-guide-active="true"]::after {
+  content: "Try this";
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 2;
+  border-radius: 999px;
+  border: 1px solid rgb(126 231 255 / 0.35);
+  background: #07111c;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ecfeff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+
+  .signal-flash {
+    animation: none;
+  }
+
+  .profile-bar {
+    transition: none;
+  }
+
+  .feed-reorder > * {
+    animation: none;
+  }
+
+  [data-guide-active="true"] {
+    animation: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-guide-active="true"] {
+    animation: guide-pulse 1.6s ease-in-out infinite;
+  }
 }
